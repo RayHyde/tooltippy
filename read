@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<!--[if lt IE 7 ]>				<html lang="en" class="ie6">						<![endif]-->
+<!--[if IE 7 ]>						<html lang="en" class="ie7">						<![endif]-->
+<!--[if IE 8 ]>						<html lang="en" class="ie8">						<![endif]-->
+<!--[if IE 9 ]>						<html lang="en" class="ie9">						<![endif]-->
+<!--[if lt IE 9]>					<script src="js/html5shiv.js"></script>	<![endif]-->
+<!--[if (gt IE 9)|!(IE)]>	<html lang="en"> 															<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Language" content="en" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Playground: Tooltippy - a CSS-only flexible tooltip</title>
+	<meta name="description" content="Tooltippy, a flexible, CSS-only tooltip that can contain full HTML">
+	<meta name="keywords" content="css, css-only, tooltip, html, html content">
+	<meta name="author" content="Ray Hyde | www.rayhyde.nl">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="images/favicon.png"> -->
+	<!--[if (lte IE 9)|!(IE)]><link rel="icon" href="favicon.ico"><![endif]-->
+	<script src="https://use.fontawesome.com/25a98fcc6a.js"></script>
+	<!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="tooltippy.css">
+	<style>
+		body {
+			background: #eee;
+			color: darkslategrey;
+		}
+		
+		.wrapper {
+			margin: 50px auto;
+			width: 900px;
+			background: #fff;
+			padding: 20px;
+		}
+		
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		td {
+			vertical-align: top;
+			font-family: 'Lucida Console', Consolas, monospace;
+			border: solid 1px #ccc;
+		}
+		td:nth-child(2) {
+			text-align: center;
+		}
+		td:last-child {
+			text-align: right;
+		}
+		td a {
+			text-decoration: none;
+			color: darkslateblue;
+		}
+		td a:hover {
+			text-decoration: underline;
+		}
+		.tooltippy-content {
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<h1>Tooltippy</h1>
+		
+		<p>Out on the net are some wonderful CSS-only tooltip solutions that convert attributes such as titles, names or data to the tooltip text. However, for a project I needed to include HTML in the tooltip.</p>
+		
+		<p>As I soon found out, a centred tooltip is nice in design, but won't wash in real life, with right and left-aligned text that can sit close to the top or bottom of a page and that also needs to be responsive.</p>
+		
+		<p>So I've made this tooltip flexible, changing its position by a few added clas
+		<table cellpadding="20" cellspacing="0">
+		<tr>
+				<td>
+					<div class="tooltippy tooltippy-above tooltippy-align-left">
+						<a href="#">
+							.tooltippy-above +<br>.tooltippy-align-left
+							<div class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em> </div>
+						</a>
+					</div>
+				</td>
+				<td>
+					<div class="tooltippy tooltippy-above">
+						<a href="#">
+							.tooltippy-above
+							<div class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em> </div>
+						</a>
+					</div>
+				</td>
+				<td>
+					<div class="tooltippy tooltippy-above tooltippy-align-right">
+						<a href="#">
+							.tooltippy-above +<br>.tooltippy-align-right
+							<div class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em> </div>
+						</a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="tooltippy tooltippy-below tooltippy-align-left">
+						<a href="#">
+							.tooltippy-below +<br>.tooltippy-align-left
+							<div class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em> </div>
+				</td>
+				<td>
+					<div class="tooltippy tooltippy-below">
+						<a href="#">
+							.tooltippy-below
+							<div class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em> </div>
+				</td>
+				<td>
+					<div class="tooltippy tooltippy-below tooltippy-align-right">
+						<a href="#">
+							.tooltippy-below +<br>.tooltippy-align-right
+							<div class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em> </div>
+				</td>
+			</tr>
+			
+		</table>
+
+</body>
+
+</html>
