@@ -14,41 +14,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/tooltippy.css">
-	<style>
-		.tooltippy-explain {
-			width: 700px;
-			margin: 50px auto;
-			border-collapse: collapse;
-		}
-		
-		.tooltippy-explain td {
-			vertical-align: top;
-			font-family: 'Lucida Console', Consolas, monospace;
-			border: solid 1px #ccc;
-			padding: 20px;
-		}
-		
-		.tooltippy-explain td:nth-child(2) {
-			text-align: center;
-		}
-		
-		.tooltippy-explain td:last-child {
-			text-align: right;
-		}
-		
-		.tooltippy-explain td a {
-			text-decoration: none;
-			color: darkslateblue;
-		}
-		
-		.tooltippy-explain td a:hover {
-			text-decoration: underline;
-		}
-		
-		.tooltippy-content {
-			font-family: sans-serif;
-		}
-	</style>
 </head>
 
 <body>
@@ -62,7 +27,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<p><a href="https://github.com/RayHyde/tooltippy" class="btn btn-link download1">Download from Github</a></p>
+					<p><a href="https://github.com/RayHyde/tooltippy" class="btn btn-success btn-lg download1">Download from Github</a></p>
 				</div>
 			</div>
 		</div>
@@ -72,75 +37,84 @@
 		<section class="copy">
 			<div class="row">
 				<div class="col-sm-12">
-
 					<p>Out on the net are some wonderful CSS-only tooltip solutions that convert attributes such as titles, names or data to the tooltip text. However, for a project I needed to include HTML in the tooltip.</p>
 
-					<p>As I soon found out, a centred tooltip is nice in design, but won't wash in real life, with right and left-aligned text that can sit close to the top or bottom of a page and that also needs to be responsive.</p>
+					<p>As I soon found out, a centrered tooltip is nice in design, but won't wash in real life, with right and left-aligned text that can sit close to the top or bottom of a page and that also needs to be responsive.</p>
 
 					<p>So I've made this tooltip flexible, changing its position by adding class names</p>
-					<table class="tooltippy-explain" cellpadding="20" cellspacing="0">
-						<tr>
-							<td>
-								<div class="tooltippy tooltippy-above tooltippy-align-left">
-									<a href="#">
+
+					<div class="tooltippy-explain-wrapper">
+						<div class="tooltippy-explain">
+							<div class="tooltippy tooltippy-above tooltippy-align-left">
+								<a href="#">
 										.tooltippy-above +<br>.tooltippy-align-left
 										<span class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em></span>
 									</a>
-								</div>
-							</td>
-							<td>
-								<div class="tooltippy tooltippy-above">
-									<a href="#">
+							</div>
+							<div class="tooltippy tooltippy-above">
+								<a href="#">
 											.tooltippy-above
 											<span class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em></span>
 										</a>
-								</div>
-							</td>
-							<td>
-								<div class="tooltippy tooltippy-above tooltippy-align-right">
-									<a href="#">
+							</div>
+							<div class="tooltippy tooltippy-above tooltippy-align-right">
+								<a href="#">
 											.tooltippy-above +<br>.tooltippy-align-right
 											<span class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em></span>
 										</a>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="tooltippy tooltippy-below tooltippy-align-left">
-									<a href="#">
+							</div>
+							<div class="tooltippy tooltippy-below tooltippy-align-left">
+								<a href="#">
 											.tooltippy-below +<br>.tooltippy-align-left
 											<span class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em></span>
 										</a>
-								</div>
-							</td>
-							<td>
-								<div class="tooltippy tooltippy-below">
-									<a href="#">
+							</div>
+							<div class="tooltippy tooltippy-below">
+								<a href="#">
 									.tooltippy-below
 									<span class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em></span>
 								</a>
-							</td>
-							<td>
-								<div class="tooltippy tooltippy-below tooltippy-align-right">
-									<a href="#">
+							</div>
+							<div class="tooltippy tooltippy-below tooltippy-align-right">
+								<a href="#">
 									.tooltippy-below +<br>.tooltippy-align-right
 									<span class="tooltippy-content"> This is the HTML content<br> <strong>Bold</strong>, <em>Italic</em></span>
 								</a>
-							</td>
-						</tr>
-					</table>
+							</div>
+						</div>
 					</div>
+					<h3>Implement Tooltippy</h3>
+					<p>Add the css to the header of your page. The LESS file is also included to make it easy for you to adapt the styles.</p>
+					<pre>
+&lt;link rel="stylesheet" href="css/tooltippy.css"&gt;</pre>
+					<p>
+						Add the class names need to a wrapper div and add an element with class name "tooltippy-content" after the text you want to hover over:
+					</p>
+					<pre>
+&lt;div class="tooltippy tooltippy-above tooltippy-align-left"&gt;
+	&lt;a href="#"&gt;
+		This text needs a tooltip!
+		&lt;span class="tooltippy-content"&gt;This is the tooltip's &lt;strong&gt;content&lt;/strong&gt;&lt;/span&gt;
+	&lt;/a&gt;
+&lt;/div&gt;</pre>
+					<p>which makes:</p>
+
+					<div class="tooltippy tooltippy-above tooltippy-align-left">
+						<a href="#">
+							This text needs a tooltip!
+							<span class="tooltippy-content">This is the tooltip's <strong>content</strong></span>
+						</a>
 					</div>
-		</section>
-		<section>
-			<div id="explain">
-				<p>This project is part of my Playground - a collection of fun (and dare I say it: clever) stuff I made in the past, from jQuery games and plugins to CSS animation tricks.</p>
-				<p>Please drop in on my portfolio site <a href="http://www.rayhyde.nl">www.rayhyde.nl</a>!</p>
+				</div>
 			</div>
-		</section>
-
-
+	</div>
+	</section>
+	<section>
+		<div id="explain">
+			<p>This project is part of my Playground - a collection of fun (and dare I say it: clever) stuff I made in the past, from jQuery games and plugins to CSS animation tricks.</p>
+			<p>Please drop in on my portfolio site <a href="http://www.rayhyde.nl">www.rayhyde.nl</a>!</p>
+		</div>
+	</section>
 </body>
 
 </html>
