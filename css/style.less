@@ -1,6 +1,11 @@
-	.tooltippy-explain-wrapper {
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+h1,h2,h3,h4 {
+	color: #37371D;
+	font-family: 'Bitter', serif;
+}
+.tooltippy-explain-wrapper {
 		width: 700px;
-		margin: 50px 0 0;
+		margin: 50px 0;
 	}
 
 	.tooltippy-explain {
@@ -10,14 +15,17 @@
 			vertical-align: top;
 			font-family: 'Lucida Console', Consolas, monospace;
 			border: solid 1px #ccc;
-			padding: 20px;
 			margin-right: -1px;
 			margin-bottom: -1px;
 			a {
 				text-decoration: none;
 				color: darkslateblue;
+				display: block;
+				height: 100%;
+				padding: 20px;
+				transition: 0.3s all;
 				&:hover {
-					text-decoration: underline;
+					background: darken(#ccc, 3%);
 				}
 			}
 			&:nth-child(2) {

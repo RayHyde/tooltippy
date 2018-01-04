@@ -1,0 +1,34 @@
+Tooltippy
+a flexible, CSS-only tooltip that can contain full HTML
+
+Out on the net are some wonderful CSS-only tooltip solutions that convert attributes such as titles, names or data to the tooltip text. However, for a project I needed to include HTML in the tooltip.
+
+As I soon found out, a centrered tooltip is nice in design, but won't wash in real life, with right and left-aligned text that can sit close to the top or bottom of a page and that also needs to be responsive.
+
+So I've made this tooltip flexible, changing its position by adding class names:
+.tooltippy-below
+.tooltippy-above
+.tooltippy-align-left
+.tooltippy-align-right
+
+You combine them as such:
+<div class="tooltippy-above tooltippy-align-left">
+
+Implement Tooltippy
+
+Add the css to the header of your page. The LESS file is also included to make it easy for you to adapt the styles.
+
+<link rel="stylesheet" href="css/tooltippy.css">
+
+Add the class names need to a wrapper div and add an element with class name "tooltippy-content" after the text you want to hover over:
+
+<div class="tooltippy tooltippy-above tooltippy-align-left">
+	<a href="#">
+		This text needs a tooltip!
+		<span class="tooltippy-content">This is the tooltip's <strong>content</strong></span>
+	</a>
+</div>
+
+This project is part of my Playground - a collection of fun (and dare I say it: clever) stuff I made in the past, from jQuery games and plugins to CSS animation tricks.
+
+Please drop in on my portfolio site www.rayhyde.nl!
